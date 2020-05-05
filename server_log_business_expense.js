@@ -12,7 +12,7 @@ const link_to_style_file='<link rel=stylesheet type=text/css href=style.css>'//h
 const html_header_string='<!DOCTYPE html><html><head>'+link_to_style_file+'</head>'
 var html_footer_string='</html>'
 const table_close_tag='</table>'
-var storage_directory='./work_search_logs_by_day/'
+var storage_directory='./business_expense_logs_by_day/'
 let port=1026
 
 http.createServer(createServerListener).listen(port)
