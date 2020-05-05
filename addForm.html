@@ -12,13 +12,13 @@ form=addForm()//params are (action, method), defaults are '//'' and 'post'
 
 //define input types and other attributes
 inputs={};//http://www.json.org/
-inputs.name=['cost','payee','link','submit'];
+inputs.name=['cost','payee','description','link','submit'];
 //inputs.name=['employer/agency','contact name','contact method','contact phone no.,email,website,etc.','type_of_work']
-inputs.type=['number','text','url','submit'];
-inputs.step=['0.01',false,false,false]
-inputs.placeholder=['Cost','Payee','Link',false]
-inputs.value=[false,false,false,'Post']
-inputs.onclick=[false,false,false,false]//https://stackoverflow.com/a/11720185/895065, https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick
+inputs.type=['number','text','text','url','submit'];
+inputs.step=['0.01',false,false,false,false]
+inputs.placeholder=['Cost','Payee','Description','Link',false]
+inputs.value=[false,false,false,false,'Post']
+inputs.onclick=[false,false,false,false,false]//https://stackoverflow.com/a/11720185/895065, https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick
 
 var number_of_columns=inputs.name.length
 for (var index in Object.keys(inputs)) {//check that each array of inputs values has the same length as the names array
