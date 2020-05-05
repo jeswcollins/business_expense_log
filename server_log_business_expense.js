@@ -3,9 +3,9 @@ const http=require('http'),fs=require('fs'),qs=require('querystring');
 tableOpenTag='<table>'
 //The "data model" should map from the form defined in append_form.html, to tableHeader, and to returnTableRowString in the next few lines.
 appendFormFilename='.\\addForm.html'//'.\\html-to-Client\\addForm.html'//File defining form to serve to browser, should match tableHeader and returnTableRow below
-tableHeader='<tr><th>Job Title<th>Organization<th>Person<th>Contact Info<th>Description<th>Link'//https://www.w3.org/TR/html401/struct/tables.html
+tableHeader='<tr><th>Cost<th>Payee<th>Link'//https://www.w3.org/TR/html401/struct/tables.html
 function returnTableRowString(post,milliseconds) {//e.g. use as returnTableRowString(post,Date.now())
-	return `<tr><td>${post.title}<td>${post.organization}<td>${post.person}<td>${post.phone}<td>${post.description}<td><a href=${post.link}>${post.link}</a></table>`}
+	return `<tr><td>${post.cost}<td>${post.payee}<td><a href=${post.link}>${post.link}</a></table>`}
 //End of Data model definition.
 
 const link_to_style_file='<link rel=stylesheet type=text/css href=style.css>'//https://stackoverflow.com/q/4957446/895065, https://www.dummies.com/web-design-development/html5-and-css3/how-to-use-an-external-style-sheet-for-html5-and-css3-programming/
